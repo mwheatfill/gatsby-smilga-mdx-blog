@@ -1,0 +1,62 @@
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../components/Complete'
+
+<section className="mdx-page">
+
+## my first mdx file
+
+**I'm baby cloud bread XOXO portland skateboard glossier flannel.** La croix 90's
+knausgaard, enamel pin adaptogen gastropub pop-up roof party farm-to-table +1 portland
+actually leggings squid. Paleo listicle jean shorts farm-to-table actually blue bottle.
+Shabby chic dreamcatcher tumblr semiotics plaid, pop-up vice banjo fingerstache forage
+seitan chillwave tousled pabst four dollar toast. _Flexitarian 90's vape, tumblr hoodie echo
+park biodiesel austin._
+
+<div className="code">
+
+```
+const firstName = "john"
+const lastName = "smith"
+```
+
+</div>
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
+
+<div className="nice-text">
+  <h3>nice text </h3>
+  <FiInfo className="nice-text-icon" />
+  <p>Letterpress enamel pin coloring book literally austin. Schlitz 90's single-origin coffee food truck. Cliche hashtag lumbersexual, schlitz church-key marfa typewriter letterpress bicycle rights. Celiac farm-to-table pinterest fashion axe, artisan iceland squid.</p>
+</div>
+<h2>React Components</h2>
+<Counter />
+
+```jsx
+import React from "react"
+import styled from "styled-components"
+import { AiOutlineLike } from "react-icons/ai"
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+<LikeButton />
+
+</section>
