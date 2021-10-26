@@ -21,7 +21,7 @@ export const query = graphql`
         frontmatter {
           author
           category
-          date(formatString: "MMMM, Do YYYY")
+          date(formatString: "MMMM Do, YYYY")
           readTime
           slug
           title
